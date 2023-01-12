@@ -4,29 +4,41 @@
 :root {
   --color-main: #ee6336;
   --typography-main: "Nunito", sans-serif;
-  --block-padding-horizontal: 130px;
-  --block-padding-vertical: 70px;
+  --block-padding-horizontal: 90px;
+  --block-padding-vertical: 40px;
   --button-border-radius: 0 25px 25px 25px;
+}
+
+* {
+  margin: 0;
 }
 
 body {
   font-family: var(--typography-main);
 }
 
-h1 {
-  color: var(--color-main);
-  font-weight: 400;
-}
-
-h2 {
-  color: black;
-  font-weight: 900;
-  font-size: 3rem;
+main {
+  padding: var(--block-padding-vertical) var(--block-padding-horizontal);
 }
 
 .block-header {
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 4px 2px -2px gray;
+  margin: 0 10px 50px 10px;
+}
+
+h1 {
+  color: var(--color-main);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+h2 {
+  color: black;
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .block-header__container-button {
@@ -53,4 +65,51 @@ h2 {
 
 .main-images__photo {
   border-radius: 25px;
+}
+
+.main-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .main-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    width: 300px;
+    text-align: center;
+  }
+
+  .main-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+.main-title__button:hover {
+  border-radius: var(--button-border-radius);
+  border: 1px solid var(--color-main);
+  background-color: white;
+  color: var(--color-main);
+  height: 40px;
+  width: 100px;
 }
