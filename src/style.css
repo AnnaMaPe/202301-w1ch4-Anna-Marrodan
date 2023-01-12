@@ -2,9 +2,55 @@
 @import url("/node_modules/@fontsource/nunito/800.css");
 
 :root {
-  --color-main: ##ee6336;
+  --color-main: #ee6336;
   --typography-main: "Nunito", sans-serif;
   --block-padding-horizontal: 130px;
   --block-padding-vertical: 70px;
   --button-border-radius: 0 25px 25px 25px;
+}
+
+body {
+  font-family: var(--typography-main);
+}
+
+h1 {
+  color: var(--color-main);
+  font-weight: 400;
+}
+
+h2 {
+  color: black;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.block-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-header__container-button {
+  display: flex;
+  align-items: center;
+}
+
+.block-header__button {
+  width: 100px;
+  height: 50px;
+  border-radius: var(--button-border-radius);
+  background-color: white;
+  border: solid var(--color-main);
+}
+
+.main-title__button {
+  border-radius: var(--button-border-radius);
+  border: none;
+  background-color: var(--color-main);
+  color: white;
+  height: 40px;
+  width: 100px;
+}
+
+.main-images__photo {
+  border-radius: 25px;
 }
